@@ -1,4 +1,4 @@
-Package: pkgtemplate
+Package: bcspecies
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: c(
@@ -16,7 +16,8 @@ Imports:
     stats,
     chk,
     lifecycle,
-    shiny
+    shiny,
+    qpdf
 Suggests: 
     covr,
     testthat (>= 2.1.0),
