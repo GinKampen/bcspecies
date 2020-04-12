@@ -17,7 +17,15 @@ Imports:
     chk,
     lifecycle,
     shiny,
-    qpdf
+    qpdf,
+    readr,
+    dplyr,
+    sf,
+    mapview,
+    stringr,
+    rmapshaper,
+    ggplot2,
+    tidyverse
 Suggests: 
     covr,
     testthat (>= 2.1.0),
