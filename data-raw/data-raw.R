@@ -59,12 +59,11 @@ ecosections <- do.call("rbind", lapply(1:nrow(ecosections), function(x){
 
 # Loading maps used in analysis
 ecosection_map <- sf::st_read("/Users/Virginia/Documents/lectures/Undergrad thesis/R documents/bcspeciesdata/data/ERC_ECOSECTIONS_SP")
-# ecosection_map2 <- bcmaps::ecosections()
+#ecosection_map2 <- bcmaps::ecosections()
 bc_boundary <- bcmaps::bc_bound()
 
 ecosection_simple <- ms_simplify(ecosection_map)
 
-usethis::use_data(ecosections, internal = TRUE, overwrite = TRUE)
-usethis::use_data(bc_boundary, internal = TRUE, overwrite = TRUE)
-usethis::use_data(ecosection_simple, internal = TRUE, overwrite = TRUE)
 usethis::use_data(bc_species, overwrite = TRUE)
+usethis::use_data(ecosections, bc_boundary, ecosection_simple, internal = TRUE, overwrite = TRUE)
+
