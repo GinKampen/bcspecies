@@ -9,6 +9,13 @@
 #' 
 
 conservation_status <- function(species) {
+  
+  chk::chk_character(species)
+  
+  if(!species %in% bcspecies::bc_species$ScientificName){
+    err::err("Invalid scientific name. See bcspecies::bc_species for reference")
+  }
+  
   species_conservation <- bcspecies::bc_species[bcspecies::bc_species$ScientificName == species,]
   species_conservation_columns <- species_conservation[c("BCList", "COSEWIC Status", "Implemented Date")]
   return(print(species_conservation_columns))
@@ -23,6 +30,13 @@ conservation_status <- function(species) {
 #' 
 ### species distribution of ecosections function 
 species_map <- function(species) {
+  
+  chk::chk_character(species)
+  
+  if(!species %in% bcspecies::bc_species$ScientificName){
+    err::err("Invalid scientific name. See bcspecies::bc_species for reference")
+  }
+  
   ecosections <- bcspecies:::ecosections
   ecosection_simple <- bcspecies:::ecosection_simple
   bc_boundary <- bcspecies:::bc_boundary

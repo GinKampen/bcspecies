@@ -25,7 +25,8 @@ Imports:
     stringr,
     rmapshaper,
     ggplot2,
-    tidyverse
+    tidyverse,
+    err
 Suggests: 
     covr,
     testthat (>= 2.1.0),
