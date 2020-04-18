@@ -13,8 +13,5 @@ species_map(species)
 a map containing highlighted ecosections connected to species provided
 }
 \description{
-species_map
-}
-\examples{
-
+Allows user to view map containing highlighted ecosections connected to species provided
 }

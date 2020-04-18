@@ -13,7 +13,7 @@ conservation_status(species)
 A table containing results of BcList, COSWEIC status and Implemented COSWEIC date
 }
 \description{
-conservation_status
+Allows user to view table containing results of BCList, COSEWIC Status and Implemented COSEWIC date
 }
 \examples{
 conservation_status("Anemone occidentalis - Carex nigricans")

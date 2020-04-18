@@ -1,4 +1,7 @@
 #' conservation_status
+#' 
+#' Allows user to view table containing results of BCList, COSEWIC Status and Implemented COSEWIC date
+#' 
 #' @param species the species provided
 #' @return A table containing results of BcList, COSWEIC status and Implemented COSWEIC date 
 #' @export
@@ -22,11 +25,14 @@ conservation_status <- function(species) {
 }
 
 #' species_map
+#' 
+#' Allows user to view map containing highlighted ecosections connected to species provided
+#' 
 #' @param species the species provided
 #' @return a map containing highlighted ecosections connected to species provided
 #' @export
 #' 
-#' @examples 
+#' @examples species_map("Anemone occidentalis - Carex nigricans)
 #' 
 ### species distribution of ecosections function 
 species_map <- function(species) {
