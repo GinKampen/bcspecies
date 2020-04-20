@@ -11,7 +11,7 @@ library(magrittr)
 
 ####species data####
 
-bc_species <- readr::read_tsv(file = "/Users/Virginia/Documents/lectures/Undergrad thesis/R documents/bcspeciesdata/data/bcsee_export.tsv")
+bc_species <- readr::read_tsv("data-raw/bcsee_export.tsv")
 
 #remove space from columns
 names(bc_species) <- gsub(" ", "", names(bc_species))
@@ -58,7 +58,7 @@ ecosections <- do.call("rbind", lapply(1:nrow(ecosections), function(x){
 }))
 
 # Loading maps used in analysis
-ecosection_map <- sf::st_read("/Users/Virginia/Documents/lectures/Undergrad thesis/R documents/bcspeciesdata/data/ERC_ECOSECTIONS_SP")
+ecosection_map <- sf::st_read("data-raw/ERC_ECOSECTIONS_SP")
 #ecosection_map2 <- bcmaps::ecosections()
 bc_boundary <- bcmaps::bc_bound()
 

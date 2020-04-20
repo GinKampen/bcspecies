@@ -4,11 +4,11 @@
 \name{bcspecies-package}
 \alias{bcspecies}
 \alias{bcspecies-package}
-\title{bcspecies: What the Package Does (One Line, Title Case)}
+\title{bcspecies: viewing and working with clean dataset of British Columbia species}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-What the package does (one paragraph).
+The clean dataset of B.C. species allows the user to use two functions; one that provides an interactive map of the specie's ecosection, and the other which provides the user with three components of the conservation status.
 }
 \seealso{
 Useful links:
@@ -19,15 +19,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
+\strong{Maintainer}: Virginia Kampen \email{virginiakampen@gmail.com}
 
-Other contributors:
+Authors:
 \itemize{
-  \item Sebastian Dalgarno \email{seb@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-3658-4517}{ORCID}) [contributor]
-  \item Evan Amies-Galonski \email{evan@poissonconsulting.ca} (\href{https://orcid.org/-3188}{ORCID}) [contributor]
-  \item Ayla Pearson (\href{https://orcid.org/0000-0001-7388-1222}{ORCID}) [contributor]
-  \item Kirill Müller (\href{https://orcid.org/0000-0002-1416-3412}{ORCID}) [contributor]
-  \item Poisson Consulting [copyright holder, funder]
+  \item Sebastian Dalgarno \email{seb@poissonconsulting.ca} [contributor]
 }
 
 }
