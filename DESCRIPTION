@@ -1,36 +1,26 @@
 Package: bcspecies
-Title: viewing and working with clean dataset of British Columbia species
+Title: Visualize and Analyze BC Species Conservation Data
 Version: 0.0.0.9000
 Authors@R: c(
     person("Virginia", "Kampen", , "virginiakampen@gmail.com", c("aut", "cre")), 
     person("Sebastian", "Dalgarno", , "seb@poissonconsulting.ca", c("aut", "ctb"))
     )
-Description: The clean dataset of B.C. species allows the user to use two functions; one that provides an interactive map of the specie's ecosection, and the other which provides the user with three components of the conservation status. 
+Description: Access a cleaned BC Species conservation dataset and for a given species, map distribution by ecosection and view conservation status. 
 License: MIT + file LICENSE
 Depends: R (>= 3.4)
 Imports:
     stats,
     chk,
     lifecycle,
-    shiny,
-    qpdf,
-    readr,
-    dplyr,
-    sf,
-    mapview,
-    stringr,
-    rmapshaper,
     ggplot2,
-    tidyverse,
-    err
+    sf
 Suggests: 
     covr,
     testthat (>= 2.1.0),
     knitr,
     rmarkdown
-Remotes: poissonconsulting/chk
-URL: https://github.com/poissonconsulting/pkgtemplate
-BugReports: https://github.com/poissonconsulting/pkgtemplate/issues
+URL: https://github.com/GinKampen/bcspecies
+BugReports: https://github.com/GinKampen/bcspecies
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0

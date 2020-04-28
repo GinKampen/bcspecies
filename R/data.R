@@ -1,6 +1,6 @@
 #' bc_species
 #' 
-#' @format currated BC species data
+#' @format Curated BC species data
 #' @examples 
 #' bc_species
 "bc_species"

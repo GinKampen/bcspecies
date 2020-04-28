@@ -13,62 +13,48 @@ knitr::opts_chunk$set(
 )
 ```
 
-# pkgtemplate <img src="man/figures/logo.png" align="right" />
+# bcspecies 
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.com/poissonconsulting/pkgtemplate.svg?branch=master)](https://travis-ci.com/poissonconsulting/pkgtemplate)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/pkgtemplate?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/pkgtemplate)
-[![Codecov test coverage](https://codecov.io/gh/poissonconsulting/pkgtemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/pkgtemplate?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/pkgtemplate)](https://CRAN.R-project.org/package=pkgtemplate) -->
-[![CRAN status](https://www.r-pkg.org/badges/version/pkgtemplate)](https://cran.r-project.org/package=pkgtemplate)
-<!-- ![CRAN downloads](https://cranlogs.r-pkg.org/badges/pkgtemplate) -->
 <!-- badges: end -->
 
-pkgtemplate provides a template for a new R package.
-
-It includes useful internal functions.
+bcspecies provides a cleaned BC Species conservation dataset and functions to map distrbution by ecosection and view conservation status for species in British Columbia, Canada.
 
 ## Installation
 
-<!-- To install the latest release from [CRAN](https://cran.r-project.org) -->
-```{r, eval=FALSE, echo=FALSE}
-install.packages("pkgtemplate")
-```
-
-To install the developmental version from [GitHub](https://github.com/poissonconsulting/pkgtemplate)
+To install the developmental version from [GitHub](https://github.com/GinKampen/bcspecies)
 ```{r, eval=FALSE}
 # install.packages("remotes")
-remotes::install_github("poissonconsulting/pkgtemplate")
-```
-
-To install the latest developmental release from the Poisson drat [repository](https://github.com/poissonconsulting/drat)
-```{r, eval=FALSE}
-# install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("pkgtemplate")
+remotes::install_github("GinKampen/bcspecies")
 ```
 
 ## Demonstration
-
-In order to create a new package the user should go to the pkgtemplate [GitHub repository](https://github.com/poissonconsulting/pkgtemplate) and choose 'Use this template'.
-
-pkgtemplate includes files used for development of Shiny applications. To remove these from the repository, run:
-```{r, eval=FALSE}
-pkgtemplate:::cannibalise_shiny(getwd())
+View first 5 species names in dataset
+```{r}
+library(bcspecies)
+bc_species$ScientificName[1:5]
 ```
 
-## Information
+Map distribution by ecosection of *Anemone occidentalis - Carex nigricans*
+```{r}
+species <- "Abies grandis / Berberis nervosa"
+species_map(species)
+```
 
-For more information see the [Get Started](https://poissonconsulting.github.io/pkgtemplate/articles/pkgtemplate.html) vignette.
+Get conservation status
+```{r}
+conservation_status(species)
+```
+
 
 ## Contribution
 
-Please report any [issues](https://github.com/poissonconsulting/pkgtemplate/issues).
+Please report any [issues](https://github.com/GinKampen/bcspecies/issues).
 
-[Pull requests](https://github.com/poissonconsulting/pkgtemplate/pulls) are always welcome.
+[Pull requests](https://github.com/GinKampen/bcspecies/pulls) are always welcome.
 
 ### Code of Conduct
 
-Please note that the pkgtemplate project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
+Please note that the bcspecies project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/). By contributing to this project, you agree to abide by its terms.

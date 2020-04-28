@@ -7,11 +7,15 @@
 species_map(species)
 }
 \arguments{
-\item{species}{the species provided}
+\item{species}{A string of the species.}
 }
 \value{
-a map containing highlighted ecosections connected to species provided
+A ggplot object.
 }
 \description{
-Allows user to view map containing highlighted ecosections connected to species provided
+Map distribution of species by BC ecosection.
+}
+\examples{
+species_map("Anemone occidentalis - Carex nigricans")
+
 }

@@ -1,77 +1,71 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pkgtemplate <img src="man/figures/logo.png" align="right" />
+# bcspecies
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build
-status](https://travis-ci.com/poissonconsulting/pkgtemplate.svg?branch=master)](https://travis-ci.com/poissonconsulting/pkgtemplate)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/pkgtemplate?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/pkgtemplate)
-[![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/pkgtemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/pkgtemplate?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/pkgtemplate)](https://CRAN.R-project.org/package=pkgtemplate) -->
-[![CRAN
-status](https://www.r-pkg.org/badges/version/pkgtemplate)](https://cran.r-project.org/package=pkgtemplate)
-<!-- ![CRAN downloads](https://cranlogs.r-pkg.org/badges/pkgtemplate) -->
 <!-- badges: end -->
 
-pkgtemplate provides a template for a new R package.
-
-It includes useful internal functions.
+bcspecies provides a cleaned BC Species dataset and functions to map
+distrbution by ecosection and view conservation status for species in
+British Columbia, Canada.
 
 ## Installation
 
-<!-- To install the latest release from [CRAN](https://cran.r-project.org) -->
-
 To install the developmental version from
-[GitHub](https://github.com/poissonconsulting/pkgtemplate)
+[GitHub](https://github.com/GinKampen/bcspecies)
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("poissonconsulting/pkgtemplate")
-```
-
-To install the latest developmental release from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-``` r
-# install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("pkgtemplate")
+remotes::install_github("GinKampen/bcspecies")
 ```
 
 ## Demonstration
 
-In order to create a new package the user should go to the pkgtemplate
-[GitHub repository](https://github.com/poissonconsulting/pkgtemplate)
-and choose ‘Use this template’.
-
-pkgtemplate includes files used for development of Shiny applications.
-To remove these from the repository, run:
+View first 5 species names in dataset
 
 ``` r
-pkgtemplate:::cannibalise_shiny(getwd())
+library(bcspecies)
+bc_species$ScientificName[1:5]
+#> [1] "Abies amabilis - Thuja plicata / Rubus spectabilis Moist Maritime 1"  
+#> [2] "Abies amabilis - Thuja plicata / Tiarella trifoliata Moist Maritime 1"
+#> [3] "Abies grandis / Berberis nervosa"                                     
+#> [4] "Abies grandis / Tiarella trifoliata"                                  
+#> [5] "Abronia umbellata var. breviflora"
 ```
 
-## Information
+Map distribution by ecosection of *Anemone occidentalis - Carex
+nigricans*
 
-For more information see the [Get
-Started](https://poissonconsulting.github.io/pkgtemplate/articles/pkgtemplate.html)
-vignette.
+``` r
+species <- "Abies grandis / Berberis nervosa"
+species_map(species)
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+Get conservation status
+
+``` r
+conservation_status(species)
+#> # A tibble: 1 x 3
+#>   BCList `COSEWIC Status` `Implemented Date` 
+#>   <chr>  <chr>            <dttm>             
+#> 1 Red    No Status        NA
+```
 
 ## Contribution
 
 Please report any
-[issues](https://github.com/poissonconsulting/pkgtemplate/issues).
+[issues](https://github.com/GinKampen/bcspecies/issues).
 
-[Pull requests](https://github.com/poissonconsulting/pkgtemplate/pulls)
-are always welcome.
+[Pull requests](https://github.com/GinKampen/bcspecies/pulls) are always
+welcome.
 
 ### Code of Conduct
 

@@ -7,13 +7,13 @@
 conservation_status(species)
 }
 \arguments{
-\item{species}{the species provided}
+\item{species}{A string of the species.}
 }
 \value{
-A table containing results of BcList, COSWEIC status and Implemented COSWEIC date
+A data.frame.
 }
 \description{
-Allows user to view table containing results of BCList, COSEWIC Status and Implemented COSEWIC date
+Get BCList, COSEWIC Status and Implemented Date of COSEWIC status for a valid species.
 }
 \examples{
 conservation_status("Anemone occidentalis - Carex nigricans")

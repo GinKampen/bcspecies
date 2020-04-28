@@ -5,7 +5,7 @@
 \alias{bc_species}
 \title{bc_species}
 \format{
-currated BC species data
+Curated BC species data
 }
 \usage{
 bc_species

@@ -4,17 +4,17 @@
 \name{bcspecies-package}
 \alias{bcspecies}
 \alias{bcspecies-package}
-\title{bcspecies: viewing and working with clean dataset of British Columbia species}
+\title{bcspecies: Visualize and Analyze BC Species Conservation Data}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-The clean dataset of B.C. species allows the user to use two functions; one that provides an interactive map of the specie's ecosection, and the other which provides the user with three components of the conservation status.
+For a given species in BC, map presence and absence by ecosection and view BC List conservation status and COSEWIC status.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/pkgtemplate}
-  \item Report bugs at \url{https://github.com/poissonconsulting/pkgtemplate/issues}
+  \item \url{https://github.com/GinKampen/bcspecies}
+  \item Report bugs at \url{https://github.com/GinKampen/bcspecies}
 }
 
 }
