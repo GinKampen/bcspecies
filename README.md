@@ -11,9 +11,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-bcspecies provides a cleaned BC Species dataset and functions to map
-distrbution by ecosection and view conservation status for species in
-British Columbia, Canada.
+`bcspecies` provides a cleaned BC Species conservation dataset and
+functions to map distrbution by ecosection and view conservation status
+for species in British Columbia, Canada.
 
 ## Installation
 
@@ -27,7 +27,7 @@ remotes::install_github("GinKampen/bcspecies")
 
 ## Demonstration
 
-View first 5 species names in dataset
+View the first 5 species’ scientific names in the dataset
 
 ``` r
 library(bcspecies)
@@ -49,7 +49,7 @@ species_map(species)
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
-Get conservation status
+Get conservation status of *Anemone occidentalis - Carex nigricans*
 
 ``` r
 conservation_status(species)
@@ -69,7 +69,7 @@ welcome.
 
 ### Code of Conduct
 
-Please note that the pkgtemplate project is released with a [Contributor
+Please note that the bcspecies project is released with a [Contributor
 Code of
 Conduct](https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/).
 By contributing to this project, you agree to abide by its terms.

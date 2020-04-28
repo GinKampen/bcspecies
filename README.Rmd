@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-bcspecies provides a cleaned BC Species conservation dataset and functions to map distrbution by ecosection and view conservation status for species in British Columbia, Canada.
+`bcspecies` provides a cleaned BC Species conservation dataset and functions to map distrbution by ecosection and view conservation status for species in British Columbia, Canada.
 
 ## Installation
 
@@ -31,7 +31,7 @@ remotes::install_github("GinKampen/bcspecies")
 ```
 
 ## Demonstration
-View first 5 species names in dataset
+View the first 5 species' scientific names in the dataset
 ```{r}
 library(bcspecies)
 bc_species$ScientificName[1:5]
@@ -43,7 +43,7 @@ species <- "Abies grandis / Berberis nervosa"
 species_map(species)
 ```
 
-Get conservation status
+Get conservation status of *Anemone occidentalis - Carex nigricans*
 ```{r}
 conservation_status(species)
 ```
